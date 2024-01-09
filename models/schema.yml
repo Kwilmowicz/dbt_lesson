@@ -1,6 +1,6 @@
 version: 2
 sources:
-  - name: data
+  - name: raw
     schema: gz_raw_data
     tables:
       - name: product
