@@ -34,4 +34,10 @@ sources:
         tests:
           - unique:
               column_name:  "(orders_id||pdt_id)"
+models:
+  - name: int_sales_margin
+    description: table with added margin for sales
+    columns:
+      - name: orders_id
+        description: part of primary key
 
