@@ -1,3 +1,4 @@
+
 select
 date_date,
 round(count (orders_id),2) as nb_transactions,
