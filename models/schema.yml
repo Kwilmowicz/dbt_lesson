@@ -76,7 +76,7 @@ models:
     columns:
       - name: orders_id
         description: part of primary key
-  - name: finance_campaign days
+  - name: finance_campaign_days
     description: aggregated by day finance data with advert cost included
     columns:
       - name: date_date
