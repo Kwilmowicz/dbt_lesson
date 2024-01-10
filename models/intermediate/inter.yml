@@ -23,6 +23,12 @@ models:
       - name: campaign_key
         tests:
         - not_null
-        
+  - name: int_campaigns_day
+    description: aggregated by date clicks, impressions and costs for adverts
+    columns:
+      - name: date_date
+        tests:
+        - not_null
+        - unique    
 
       
