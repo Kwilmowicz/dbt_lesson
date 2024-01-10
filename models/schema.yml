@@ -17,6 +17,42 @@ sources:
               column_name: products_id
           - not_null:
               column_name: products_id
+      - name: adwords
+        identifier: raw_gz_adwords
+        tests:
+          - unique:
+              column_name:  "(date_date||campaign_key)"
+        columns:
+          - name: campaign_key
+            tests:
+              - not_null
+      - name: facebook
+        identifier: raw_gz_facebook
+        tests:
+          - unique:
+              column_name:  "(date_date||campaign_key)"
+        columns:
+          - name: campaign_key
+            tests:
+              - not_null
+      - name: bing
+        identifier: raw_gz_bing
+        tests:
+          - unique:
+              column_name:  "(date_date||campaign_key)"
+        columns:
+          - name: campaign_key
+            tests:
+              - not_null
+      - name: criteo
+        identifier: raw_gz_criteo
+        tests:
+          - unique:
+              column_name:  "(date_date||campaign_key)"
+        columns:
+          - name: campaign_key
+            tests:
+              - not_null        
       - name: ship
         identifier: raw_gz_ship
         tests:
@@ -40,4 +76,14 @@ models:
     columns:
       - name: orders_id
         description: part of primary key
+  - name: finance_campaign days
+    description: aggregated by day finance data with advert cost included
+    columns:
+      - name: date_date
+        description: date!?!
+        tests:
+          - unique
+          - not_null
+              
+        
 
